@@ -9,14 +9,14 @@ body {
 }
 
 table { 
-	width:100%;
+	width: 100%;
 	overflow-x: auto;
 }
 
 #zoekveld {
 	text-align: center;
 	width: 100%;
-	height: 10%;
+	height: 15%;
 }
 
 .rn {
