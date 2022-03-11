@@ -1,4 +1,4 @@
-* { font-family: verdana,arial,helvetica,sans-serif; font-size:20px;}
+* { font-family: verdana,arial,helvetica,sans-serif;}
 
 .odd {
 	background-color: #F5F5F5;
@@ -11,6 +11,7 @@ body {
 table { 
 	width: 100%;
 	overflow-x: auto;
+	font-size: 2vw;
 }
 
 #zoekveld {
