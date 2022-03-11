@@ -7,7 +7,7 @@
 <script>
     function zoek() {
         // Declare variables
-        var input, filter, table, tr, artiest, titel, i, txtValueArtiest, txtValueTitel;
+        var input, filter, table, tr, artiest, titel, jaar, i, txtValueArtiest, txtValueTitel, txtValueJaar;
         input = document.getElementById("zoekveld");
         filter = input.value.toUpperCase();
         table = document.getElementById("myTable");
@@ -18,10 +18,12 @@
         for (i = 0; i < tr.length; i++) {
             artiest = tr[i].getElementsByTagName("td")[1];
             titel = tr[i].getElementsByTagName("td")[2];
+		jaar = tr[i].getElementsByTagName("td")[3];
             if (artiest) {
                 txtValueArtiest = artiest.textContent || artiest.innerText;
                 txtValueTitel = titel.textContent || titel.innerText;
-                if (txtValueArtiest.toUpperCase().indexOf(filter) > -1 || txtValueTitel.toUpperCase().indexOf(filter) > -1) {
+                txtValueJaar = jaar.textContent || jaar.innerText;
+                if (txtValueArtiest.toUpperCase().indexOf(filter) > -1 || txtValueTitel.toUpperCase().indexOf(filter) > -1  || txtValueJaar.toUpperCase().indexOf(filter) > -1) {
                     tr[i].style.display ="";
                 } else {
                     tr[i].style.display ="none";
@@ -29,6 +31,14 @@
             }
 
         }
+//Reloading CSS page
+	var links = document.getElementsByTagName("link");
+	for (var cl in links)
+	{
+	var link = links[cl];
+	if (link.rel === "stylesheet")
+	link.href += "";
+	}
     }
 </script>
 
