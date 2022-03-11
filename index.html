@@ -12,9 +12,7 @@
         filter = input.value.toUpperCase();
         table = document.getElementById("myTable");
         tr = table.getElementsByTagName("tr");
-
         // Loop through all table rows, get title and artist and match against search query
-
         for (i = 0; i < tr.length; i++) {
             artiest = tr[i].getElementsByTagName("td")[1];
             titel = tr[i].getElementsByTagName("td")[2];
@@ -39,8 +37,6 @@
     <div>
 	<input type="text" id="zoekveld" onkeyup="zoek()" placeholder=" 🔎 Doorzoek de liedjes">
         <table id="myTable" class="list">
-
-
             <thead>
                 <tr>
                     <th>Artist</th>
@@ -48,6 +44,8 @@
                     <th>Year</th>
                 </tr>
    </thead>
+
+
    <tbody>
     <tr class="odd">
      <td class="rn">1</td>
