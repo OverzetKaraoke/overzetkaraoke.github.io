@@ -1,12 +1,9 @@
-<html>
+﻿<html>
 <head>
     <title>OverzetKaraoke - Doorzoek alle liedjes!</title>
     <link href="layout.css" rel="stylesheet" txpe="text/css" />
 </head>
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=no;user-scalable=0;"/>
-
-
-
 <script>
     function zoek() {
         // Declare variables
@@ -30,38 +27,24 @@
                     tr[i].style.display ="none";
                 }
             }
+
         }
+
     }
-
-
-// '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
-$(window).on("load resize ", function() {
-  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-  $('.tbl-header').css({'padding-right':scrollWidth});
-}).resize();
 </script>
 
-
-
-<section>
-  <h1><input type="text" id="zoekveld" onkeyup="zoek()" placeholder=" 🔎 Doorzoek de liedjes"></h1>
-
-  <div class="tbl-header">
-    <table class="list" cellpadding="0" cellspacing="0" border="0">
-      <thead>
+<body>
+    <div>
+	<input type="text" id="zoekveld" onkeyup="zoek()" placeholder=" 🔎 Doorzoek de liedjes">
+        <table id="myTable" class="list">
+            <thead>
                 <tr>
                     <th>Artist</th>
-                    <th style="text-align: center;">Title</th>
-                    <th style="text-align: right;">Year</th>
+                    <th>Title</th>
+                    <th>Year</th>
                 </tr>
-      </thead>
-    </table>
-  </div>
-  <div class="tbl-content">
-    <table id="myTable" cellpadding="0" cellspacing="0" border="0">
-      <tbody>
-
-
+   </thead>
+<tbody>
 
 
     
@@ -20298,12 +20281,7 @@ $(window).on("load resize ", function() {
      <td>Magia</td>
      <td>2021</td>
     </tr>
-
-
-
-
-
-      </tbody>
-    </table>
-  </div>
-</section>
+   </tbody>
+  </table>
+ </body>
+</html>
