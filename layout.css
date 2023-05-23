@@ -20,6 +20,22 @@ h1{
   margin-bottom: 15px;
 }
 
+a {
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a:link, a:visited {
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+
 #zoekveld {
 	text-align: center;
 	width: 100%;
