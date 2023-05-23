@@ -8,16 +8,15 @@
 
 
 <script>
-    function zoek() {
-        // Declare variables
-        var input, filter, table, tr, artiest, titel, jaar, i, txtValueArtiest, txtValueTitel, txtValueJaar;
-        input = document.getElementById("zoekveld");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        // Loop through all table rows, get title and artist and match against search query
-        for (i = 0; i < tr.length; i++) {
-            artiest = tr[i].getElementsByTagName("td")[1];
+function zoek() {
+	var input, filter, table, tr, artiest, titel, jaar, i, txtValueArtiest, txtValueTitel, txtValueJaar;
+	input = document.getElementById("zoekveld");
+	filter = input.value.toUpperCase();
+	table = document.getElementById("myTable");
+	tr = table.getElementsByTagName("tr");
+	// Loop through all table rows, get title and artist and match against search query
+	for (i = 0; i < tr.length; i++) {
+		artiest = tr[i].getElementsByTagName("td")[1];
             titel = tr[i].getElementsByTagName("td")[2];
 		jaar = tr[i].getElementsByTagName("td")[3];
             if (artiest) {
@@ -33,15 +32,12 @@
         }
     }
 
-
-// '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+//.tbl-content consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here we calculate the width
 $(window).on("load resize ", function() {
   var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
   $('.tbl-header').css({'padding-right':scrollWidth});
 }).resize();
 </script>
-
-
 
 <section>
   <h1><input type="text" id="zoekveld" onkeyup="zoek()" placeholder=" 🔎 Doorzoek de liedjes"></h1>
